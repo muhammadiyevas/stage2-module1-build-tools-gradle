@@ -2,10 +2,17 @@ repositories {
     mavenCentral()
 }
 
-subprojects {
+allprojects {
     apply plugin: 'java'
 
     dependencies {
+        implementation 'org.apache.commons:commons-lang3:3.12.0'
         testImplementation('org.junit.jupiter:junit-jupiter:5.8.1')
+    }
+
+    repositories {
+        maven {
+            url "https://repo1.maven.org/maven2"
+        }
     }
 }
